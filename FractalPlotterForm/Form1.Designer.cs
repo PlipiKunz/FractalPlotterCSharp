@@ -31,22 +31,36 @@ namespace FractalPlotterForm
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.colorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.greyScaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rainbowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pleasingRainbowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acurateRainbowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.warmthToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.coolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.warmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.greyScaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fractalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mandelBrotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.burningShipToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.juliaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.julia1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.julia2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.julia3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.julia4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.burningShipToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.WantedIters = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.RAxisDisplay = new System.Windows.Forms.NumericUpDown();
+            this.SpanDisplay = new System.Windows.Forms.NumericUpDown();
+            this.IAxisDisplay = new System.Windows.Forms.NumericUpDown();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.WantedIters)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RAxisDisplay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SpanDisplay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IAxisDisplay)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -71,33 +85,26 @@ namespace FractalPlotterForm
             this.colorToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
             this.colorToolStripMenuItem.Text = "Color";
             // 
-            // greyScaleToolStripMenuItem
-            // 
-            this.greyScaleToolStripMenuItem.Name = "greyScaleToolStripMenuItem";
-            this.greyScaleToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.greyScaleToolStripMenuItem.Text = "GreyScale";
-            this.greyScaleToolStripMenuItem.Click += new System.EventHandler(this.greyScaleToolStripMenuItem_Click);
-            // 
             // rainbowToolStripMenuItem
             // 
             this.rainbowToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pleasingRainbowToolStripMenuItem,
             this.acurateRainbowToolStripMenuItem});
             this.rainbowToolStripMenuItem.Name = "rainbowToolStripMenuItem";
-            this.rainbowToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.rainbowToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
             this.rainbowToolStripMenuItem.Text = "Rainbow";
             // 
             // pleasingRainbowToolStripMenuItem
             // 
             this.pleasingRainbowToolStripMenuItem.Name = "pleasingRainbowToolStripMenuItem";
-            this.pleasingRainbowToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pleasingRainbowToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
             this.pleasingRainbowToolStripMenuItem.Text = "Pleasing Rainbow";
             this.pleasingRainbowToolStripMenuItem.Click += new System.EventHandler(this.pleasingRainbowToolStripMenuItem_Click);
             // 
             // acurateRainbowToolStripMenuItem
             // 
             this.acurateRainbowToolStripMenuItem.Name = "acurateRainbowToolStripMenuItem";
-            this.acurateRainbowToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.acurateRainbowToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
             this.acurateRainbowToolStripMenuItem.Text = "Acurate Rainbow";
             this.acurateRainbowToolStripMenuItem.Click += new System.EventHandler(this.acurateRainbowToolStripMenuItem_Click);
             // 
@@ -107,22 +114,29 @@ namespace FractalPlotterForm
             this.coolToolStripMenuItem,
             this.warmToolStripMenuItem});
             this.warmthToolStripMenuItem.Name = "warmthToolStripMenuItem";
-            this.warmthToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.warmthToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
             this.warmthToolStripMenuItem.Text = "Warmth";
             // 
             // coolToolStripMenuItem
             // 
             this.coolToolStripMenuItem.Name = "coolToolStripMenuItem";
-            this.coolToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.coolToolStripMenuItem.Size = new System.Drawing.Size(131, 26);
             this.coolToolStripMenuItem.Text = "Cool";
             this.coolToolStripMenuItem.Click += new System.EventHandler(this.coolToolStripMenuItem_Click);
             // 
             // warmToolStripMenuItem
             // 
             this.warmToolStripMenuItem.Name = "warmToolStripMenuItem";
-            this.warmToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.warmToolStripMenuItem.Size = new System.Drawing.Size(131, 26);
             this.warmToolStripMenuItem.Text = "Warm";
             this.warmToolStripMenuItem.Click += new System.EventHandler(this.warmToolStripMenuItem_Click);
+            // 
+            // greyScaleToolStripMenuItem
+            // 
+            this.greyScaleToolStripMenuItem.Name = "greyScaleToolStripMenuItem";
+            this.greyScaleToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
+            this.greyScaleToolStripMenuItem.Text = "GreyScale";
+            this.greyScaleToolStripMenuItem.Click += new System.EventHandler(this.greyScaleToolStripMenuItem_Click);
             // 
             // fractalToolStripMenuItem
             // 
@@ -137,16 +151,9 @@ namespace FractalPlotterForm
             // mandelBrotToolStripMenuItem
             // 
             this.mandelBrotToolStripMenuItem.Name = "mandelBrotToolStripMenuItem";
-            this.mandelBrotToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.mandelBrotToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
             this.mandelBrotToolStripMenuItem.Text = "MandelBrot";
             this.mandelBrotToolStripMenuItem.Click += new System.EventHandler(this.mandelBrotToolStripMenuItem_Click);
-            // 
-            // burningShipToolStripMenuItem
-            // 
-            this.burningShipToolStripMenuItem.Name = "burningShipToolStripMenuItem";
-            this.burningShipToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.burningShipToolStripMenuItem.Text = "BurningShip";
-            this.burningShipToolStripMenuItem.Click += new System.EventHandler(this.burningShipToolStripMenuItem_Click);
             // 
             // juliaToolStripMenuItem
             // 
@@ -156,7 +163,7 @@ namespace FractalPlotterForm
             this.julia3ToolStripMenuItem,
             this.julia4ToolStripMenuItem});
             this.juliaToolStripMenuItem.Name = "juliaToolStripMenuItem";
-            this.juliaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.juliaToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
             this.juliaToolStripMenuItem.Text = "Julia";
             // 
             // julia1ToolStripMenuItem
@@ -187,11 +194,147 @@ namespace FractalPlotterForm
             this.julia4ToolStripMenuItem.Text = "Julia4";
             this.julia4ToolStripMenuItem.Click += new System.EventHandler(this.julia4ToolStripMenuItem_Click);
             // 
+            // burningShipToolStripMenuItem
+            // 
+            this.burningShipToolStripMenuItem.Name = "burningShipToolStripMenuItem";
+            this.burningShipToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.burningShipToolStripMenuItem.Text = "BurningShip";
+            this.burningShipToolStripMenuItem.Click += new System.EventHandler(this.burningShipToolStripMenuItem_Click);
+            // 
+            // WantedIters
+            // 
+            this.WantedIters.Location = new System.Drawing.Point(315, 3);
+            this.WantedIters.Maximum = new decimal(new int[] {
+            5000,
+            0,
+            0,
+            0});
+            this.WantedIters.Name = "WantedIters";
+            this.WantedIters.Size = new System.Drawing.Size(75, 27);
+            this.WantedIters.TabIndex = 2;
+            this.WantedIters.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.WantedIters.ValueChanged += new System.EventHandler(this.WantedIters_ValueChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(0, 31);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(402, 389);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(230, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 20);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Itterations:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(8, 40);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 20);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "R-Axis";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(139, 40);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 20);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "I-Axis";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(270, 40);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 20);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Span";
+            // 
+            // RAxisDisplay
+            // 
+            this.RAxisDisplay.DecimalPlaces = 10;
+            this.RAxisDisplay.Location = new System.Drawing.Point(8, 63);
+            this.RAxisDisplay.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.RAxisDisplay.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
+            this.RAxisDisplay.Name = "RAxisDisplay";
+            this.RAxisDisplay.Size = new System.Drawing.Size(121, 27);
+            this.RAxisDisplay.TabIndex = 11;
+            this.RAxisDisplay.ValueChanged += new System.EventHandler(this.RAxisDisplay_ValueChanged);
+            // 
+            // SpanDisplay
+            // 
+            this.SpanDisplay.DecimalPlaces = 10;
+            this.SpanDisplay.Location = new System.Drawing.Point(270, 63);
+            this.SpanDisplay.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.SpanDisplay.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
+            this.SpanDisplay.Name = "SpanDisplay";
+            this.SpanDisplay.Size = new System.Drawing.Size(121, 27);
+            this.SpanDisplay.TabIndex = 14;
+            this.SpanDisplay.ValueChanged += new System.EventHandler(this.SpanDisplay_ValueChanged);
+            // 
+            // IAxisDisplay
+            // 
+            this.IAxisDisplay.DecimalPlaces = 10;
+            this.IAxisDisplay.Location = new System.Drawing.Point(139, 63);
+            this.IAxisDisplay.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.IAxisDisplay.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
+            this.IAxisDisplay.Name = "IAxisDisplay";
+            this.IAxisDisplay.Size = new System.Drawing.Size(121, 27);
+            this.IAxisDisplay.TabIndex = 15;
+            this.IAxisDisplay.ValueChanged += new System.EventHandler(this.IAxisDisplay_ValueChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(402, 373);
+            this.ClientSize = new System.Drawing.Size(402, 401);
+            this.Controls.Add(this.IAxisDisplay);
+            this.Controls.Add(this.SpanDisplay);
+            this.Controls.Add(this.RAxisDisplay);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.WantedIters);
             this.Controls.Add(this.menuStrip1);
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
@@ -206,6 +349,11 @@ namespace FractalPlotterForm
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.WantedIters)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RAxisDisplay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SpanDisplay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IAxisDisplay)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,6 +377,15 @@ namespace FractalPlotterForm
         private System.Windows.Forms.ToolStripMenuItem warmthToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem coolToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem warmToolStripMenuItem;
+        private System.Windows.Forms.NumericUpDown WantedIters;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown RAxisDisplay;
+        private System.Windows.Forms.NumericUpDown SpanDisplay;
+        private System.Windows.Forms.NumericUpDown IAxisDisplay;
     }
 }
 

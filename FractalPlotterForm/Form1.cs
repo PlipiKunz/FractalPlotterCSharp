@@ -25,11 +25,16 @@ namespace FractalPlotterForm
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            pb.Width = this.Width;
-            pb.Height = this.Height;
-            pb.SizeMode = PictureBoxSizeMode.StretchImage;
-            pb.Image = (Image)fp.img;
-            this.Controls.Add(pb);
+            /* pb.Width = this.Width;
+             pb.Height = this.Height;
+             pb.SizeMode = PictureBoxSizeMode.StretchImage;
+             pb.Image = (Image)fp.img;
+             this.Controls.Add(pb);*/
+
+            pictureBox1.Width = this.Width;
+            pictureBox1.Height = this.Height;
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.Image = (Image)fp.img;
         }
 
 
@@ -45,26 +50,26 @@ namespace FractalPlotterForm
 
         private void Form1_ResizeEnd(object sender, EventArgs e)
         {
-            pb.Width = this.Width;
-            pb.Height = this.Height;
+            /*pictureBox1.Width = this.Width;
+            pictureBox1.Height = this.Height;*/
         }
 
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
 
             float adjustmentLR = .05f * this.fp.Span;
+            float zoomAmount = 1.1f;
+
             switch (e.KeyChar)
             {
                 case '<':
                 case ',':
-                    this.fp.Zoom /= zoom_speed;
-                    this.zoom_speed -= .05f;
+                    this.fp.Span /= zoomAmount;
                     this.moved = true;
                     break;
                 case '>':
                 case '.':
-                    this.fp.Zoom *= zoom_speed;
-                    this.zoom_speed += .05f;
+                    this.fp.Span *= zoomAmount;
                     this.moved = true;
                     break;
 
@@ -97,8 +102,16 @@ namespace FractalPlotterForm
         private void update()
         {
             fp.updateRectangleChecking();
-            pb.Image = fp.img;
-            pb.Refresh();
+            pictureBox1.Image = fp.img;
+            pictureBox1.Refresh();
+
+
+            RAxisDisplay.Value = (decimal)fp.CenterR;
+            RAxisDisplay.Refresh();
+            IAxisDisplay.Value = (decimal)fp.CenterI;
+            IAxisDisplay.Refresh();
+            SpanDisplay.Value = (decimal)fp.Span;
+            SpanDisplay.Refresh();
         }
 
 
@@ -107,15 +120,12 @@ namespace FractalPlotterForm
 
         }
 
-
-
         private void pleasingRainbowToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
             fp.setColor(ColorGradients.Rainbow);
             update();
         }
-
         private void acurateRainbowToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -128,14 +138,12 @@ namespace FractalPlotterForm
             fp.setColor(ColorGradients.GreyScale);
             update();
         }
-
         private void coolToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
             fp.setColor(ColorGradients.Cool);
             update();
         }
-
         private void warmToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -143,42 +151,68 @@ namespace FractalPlotterForm
             update();
         }
 
+
         private void mandelBrotToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fp.reset(Fractals.mandelbrot);
             update();
         }
-
         private void burningShipToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fp.reset(Fractals.burningShip);
             update();
         }
-
         private void julia1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fp.reset(Fractals.julia1);
             update();
         }
-
         private void julia2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fp.reset(Fractals.julia2);
             update();
         }
-
         private void julia3ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fp.reset(Fractals.julia3);
             update();
         }
-
         private void julia4ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fp.reset(Fractals.julia4);
             update();
         }
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Focus();
+        }
 
+
+        private void WantedIters_ValueChanged(object sender, EventArgs e)
+        {
+            Fractals.max_itters = (int)(WantedIters.Value);
+            update();
+        }
+
+        private void RAxisDisplay_ValueChanged(object sender, EventArgs e)
+        {
+            fp.CenterR = (float)RAxisDisplay.Value;
+            update();
+        }
+
+        private void IAxisDisplay_ValueChanged(object sender, EventArgs e)
+        {
+
+            fp.CenterI = (float)IAxisDisplay.Value;
+            update();
+        }
+
+        private void SpanDisplay_ValueChanged(object sender, EventArgs e)
+        {
+
+            fp.Span = (float)SpanDisplay.Value;
+            update();
+        }
     }
 }
 

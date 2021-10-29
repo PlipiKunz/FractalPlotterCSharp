@@ -46,11 +46,6 @@ namespace FractalPlotterForm
 
         public Func<Complex, int> fractalFunction;
 
-        public float Zoom
-        {
-            get { return _z; }
-            set { _z = value; Span = (4 / value); }
-        }
 
         public float Span;
 
@@ -70,7 +65,7 @@ namespace FractalPlotterForm
         {
             CenterR = 0;
             CenterI = 0;
-            Zoom = .9f;
+            Span = 4;
             size = 420;
             img = new Bitmap(size, size);
 
