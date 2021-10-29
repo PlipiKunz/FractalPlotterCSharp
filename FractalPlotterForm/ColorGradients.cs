@@ -8,14 +8,16 @@ namespace FractalPlotterForm
 {
     class ColorGradients
     {
-        static public List<Color> GreyScale(int size = 5)
+        static public List<Color> GreyScale()
         {
+            int size = 20;
             Color[] colorSteps = { Color.Black, Color.White, Color.Black };
-            return gradGenerator(5, colorSteps);
+            return gradGenerator(size, colorSteps);
         }
 
-        static public List<Color> Rainbow(int size)
+        static public List<Color> Rainbow()
         {
+            int size = Fractals.max_itters * 2 / 3;
             Color[] colorSteps = { Color.Blue, Color.Yellow, Color.Red, Color.Purple, Color.Blue };
             return gradGenerator(size, colorSteps);
         }

@@ -112,14 +112,14 @@ namespace FractalPlotterForm
         private void toolStripTextBox1_Click(object sender, EventArgs e)
         {
 
-            fp.setColor(ColorGradients.Rainbow, Fractals.max_itters * 2 / 3);
+            fp.setColor(ColorGradients.Rainbow);
             update();
         }
 
         private void greyScaleToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            fp.setColor(ColorGradients.GreyScale, 5);
+            fp.setColor(ColorGradients.GreyScale);
             update();
         }
 

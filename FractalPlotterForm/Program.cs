@@ -58,12 +58,12 @@ namespace FractalPlotterForm
         {
 
             reset(Fractals.mandelbrot);
-            setColor(ColorGradients.Rainbow, Fractals.max_itters * 2 / 3);
+            setColor(ColorGradients.Rainbow);
         }
 
-        public void setColor(Func<int, List<Color>> colorGenerator, int steps)
+        public void setColor(Func<List<Color>> colorGenerator)
         {
-            colors = colorGenerator(steps);
+            colors = colorGenerator();
         }
 
         public void reset(Func<Complex, int> fractalFunction)
