@@ -35,6 +35,9 @@ namespace FractalPlotterForm
             this.rainbowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pleasingRainbowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acurateRainbowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.warmthToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.coolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.warmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fractalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mandelBrotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.burningShipToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,9 +46,6 @@ namespace FractalPlotterForm
             this.julia2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.julia3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.julia4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.warmthToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.coolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.warmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,9 +64,9 @@ namespace FractalPlotterForm
             // colorToolStripMenuItem
             // 
             this.colorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.greyScaleToolStripMenuItem,
             this.rainbowToolStripMenuItem,
-            this.warmthToolStripMenuItem});
+            this.warmthToolStripMenuItem,
+            this.greyScaleToolStripMenuItem});
             this.colorToolStripMenuItem.Name = "colorToolStripMenuItem";
             this.colorToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
             this.colorToolStripMenuItem.Text = "Color";
@@ -90,23 +90,46 @@ namespace FractalPlotterForm
             // pleasingRainbowToolStripMenuItem
             // 
             this.pleasingRainbowToolStripMenuItem.Name = "pleasingRainbowToolStripMenuItem";
-            this.pleasingRainbowToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
+            this.pleasingRainbowToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.pleasingRainbowToolStripMenuItem.Text = "Pleasing Rainbow";
             this.pleasingRainbowToolStripMenuItem.Click += new System.EventHandler(this.pleasingRainbowToolStripMenuItem_Click);
             // 
             // acurateRainbowToolStripMenuItem
             // 
             this.acurateRainbowToolStripMenuItem.Name = "acurateRainbowToolStripMenuItem";
-            this.acurateRainbowToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
+            this.acurateRainbowToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.acurateRainbowToolStripMenuItem.Text = "Acurate Rainbow";
             this.acurateRainbowToolStripMenuItem.Click += new System.EventHandler(this.acurateRainbowToolStripMenuItem_Click);
+            // 
+            // warmthToolStripMenuItem
+            // 
+            this.warmthToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.coolToolStripMenuItem,
+            this.warmToolStripMenuItem});
+            this.warmthToolStripMenuItem.Name = "warmthToolStripMenuItem";
+            this.warmthToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.warmthToolStripMenuItem.Text = "Warmth";
+            // 
+            // coolToolStripMenuItem
+            // 
+            this.coolToolStripMenuItem.Name = "coolToolStripMenuItem";
+            this.coolToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.coolToolStripMenuItem.Text = "Cool";
+            this.coolToolStripMenuItem.Click += new System.EventHandler(this.coolToolStripMenuItem_Click);
+            // 
+            // warmToolStripMenuItem
+            // 
+            this.warmToolStripMenuItem.Name = "warmToolStripMenuItem";
+            this.warmToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.warmToolStripMenuItem.Text = "Warm";
+            this.warmToolStripMenuItem.Click += new System.EventHandler(this.warmToolStripMenuItem_Click);
             // 
             // fractalToolStripMenuItem
             // 
             this.fractalToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mandelBrotToolStripMenuItem,
-            this.burningShipToolStripMenuItem,
-            this.juliaToolStripMenuItem});
+            this.juliaToolStripMenuItem,
+            this.burningShipToolStripMenuItem});
             this.fractalToolStripMenuItem.Name = "fractalToolStripMenuItem";
             this.fractalToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
             this.fractalToolStripMenuItem.Text = "Fractal";
@@ -114,14 +137,14 @@ namespace FractalPlotterForm
             // mandelBrotToolStripMenuItem
             // 
             this.mandelBrotToolStripMenuItem.Name = "mandelBrotToolStripMenuItem";
-            this.mandelBrotToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.mandelBrotToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.mandelBrotToolStripMenuItem.Text = "MandelBrot";
             this.mandelBrotToolStripMenuItem.Click += new System.EventHandler(this.mandelBrotToolStripMenuItem_Click);
             // 
             // burningShipToolStripMenuItem
             // 
             this.burningShipToolStripMenuItem.Name = "burningShipToolStripMenuItem";
-            this.burningShipToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.burningShipToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.burningShipToolStripMenuItem.Text = "BurningShip";
             this.burningShipToolStripMenuItem.Click += new System.EventHandler(this.burningShipToolStripMenuItem_Click);
             // 
@@ -133,7 +156,7 @@ namespace FractalPlotterForm
             this.julia3ToolStripMenuItem,
             this.julia4ToolStripMenuItem});
             this.juliaToolStripMenuItem.Name = "juliaToolStripMenuItem";
-            this.juliaToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.juliaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.juliaToolStripMenuItem.Text = "Julia";
             // 
             // julia1ToolStripMenuItem
@@ -163,29 +186,6 @@ namespace FractalPlotterForm
             this.julia4ToolStripMenuItem.Size = new System.Drawing.Size(129, 26);
             this.julia4ToolStripMenuItem.Text = "Julia4";
             this.julia4ToolStripMenuItem.Click += new System.EventHandler(this.julia4ToolStripMenuItem_Click);
-            // 
-            // warmthToolStripMenuItem
-            // 
-            this.warmthToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.coolToolStripMenuItem,
-            this.warmToolStripMenuItem});
-            this.warmthToolStripMenuItem.Name = "warmthToolStripMenuItem";
-            this.warmthToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.warmthToolStripMenuItem.Text = "Warmth";
-            // 
-            // coolToolStripMenuItem
-            // 
-            this.coolToolStripMenuItem.Name = "coolToolStripMenuItem";
-            this.coolToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.coolToolStripMenuItem.Text = "Cool";
-            this.coolToolStripMenuItem.Click += new System.EventHandler(this.coolToolStripMenuItem_Click);
-            // 
-            // warmToolStripMenuItem
-            // 
-            this.warmToolStripMenuItem.Name = "warmToolStripMenuItem";
-            this.warmToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.warmToolStripMenuItem.Text = "Warm";
-            this.warmToolStripMenuItem.Click += new System.EventHandler(this.warmToolStripMenuItem_Click);
             // 
             // Form1
             // 
