@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "m/Gn6qNC5R/wND3ignWzVVSpk20mis9imb6BrjMqbhQswcN22e+YSNlvDC+Ft/d7GC+GSpNxnqhojIJAJitfng==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\User\\ActualWork\\Tutorials\\c# tutorual\\FractalPlotterForm\\FractalPlotterForm\\FractalPlotterForm.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.19\\microsoft.netcore.app.host.win-x64.3.1.19.nupkg.sha512"
+  ],
+  "logs": []
+}

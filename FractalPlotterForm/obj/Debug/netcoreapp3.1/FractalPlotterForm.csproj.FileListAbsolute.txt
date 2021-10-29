@@ -1,0 +1,17 @@
+C:\Users\User\source\repos\FractalPlotterForm\FractalPlotterForm\bin\Debug\netcoreapp3.1\FractalPlotterForm.exe
+C:\Users\User\source\repos\FractalPlotterForm\FractalPlotterForm\bin\Debug\netcoreapp3.1\FractalPlotterForm.deps.json
+C:\Users\User\source\repos\FractalPlotterForm\FractalPlotterForm\bin\Debug\netcoreapp3.1\FractalPlotterForm.runtimeconfig.json
+C:\Users\User\source\repos\FractalPlotterForm\FractalPlotterForm\bin\Debug\netcoreapp3.1\FractalPlotterForm.runtimeconfig.dev.json
+C:\Users\User\source\repos\FractalPlotterForm\FractalPlotterForm\bin\Debug\netcoreapp3.1\FractalPlotterForm.dll
+C:\Users\User\source\repos\FractalPlotterForm\FractalPlotterForm\bin\Debug\netcoreapp3.1\FractalPlotterForm.pdb
+C:\Users\User\source\repos\FractalPlotterForm\FractalPlotterForm\obj\Debug\netcoreapp3.1\FractalPlotterForm.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\FractalPlotterForm\FractalPlotterForm\obj\Debug\netcoreapp3.1\FractalPlotterForm.Form1.resources
+C:\Users\User\source\repos\FractalPlotterForm\FractalPlotterForm\obj\Debug\netcoreapp3.1\FractalPlotterForm.csproj.GenerateResource.cache
+C:\Users\User\source\repos\FractalPlotterForm\FractalPlotterForm\obj\Debug\netcoreapp3.1\FractalPlotterForm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\FractalPlotterForm\FractalPlotterForm\obj\Debug\netcoreapp3.1\FractalPlotterForm.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\FractalPlotterForm\FractalPlotterForm\obj\Debug\netcoreapp3.1\FractalPlotterForm.AssemblyInfo.cs
+C:\Users\User\source\repos\FractalPlotterForm\FractalPlotterForm\obj\Debug\netcoreapp3.1\FractalPlotterForm.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\FractalPlotterForm\FractalPlotterForm\obj\Debug\netcoreapp3.1\FractalPlotterForm.dll
+C:\Users\User\source\repos\FractalPlotterForm\FractalPlotterForm\obj\Debug\netcoreapp3.1\FractalPlotterForm.pdb
+C:\Users\User\source\repos\FractalPlotterForm\FractalPlotterForm\obj\Debug\netcoreapp3.1\FractalPlotterForm.genruntimeconfig.cache
+C:\Users\User\source\repos\FractalPlotterForm\FractalPlotterForm\obj\Debug\netcoreapp3.1\FractalPlotterForm.Properties.Resources.resources
