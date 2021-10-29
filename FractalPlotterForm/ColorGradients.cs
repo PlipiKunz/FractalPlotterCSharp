@@ -18,7 +18,28 @@ namespace FractalPlotterForm
         static public List<Color> Rainbow()
         {
             int size = Fractals.max_itters * 2 / 3;
-            Color[] colorSteps = { Color.Blue, Color.Yellow, Color.Red, Color.Purple, Color.Blue };
+            Color[] colorSteps = { Color.Navy, Color.Yellow, Color.Red, Color.Purple, Color.Blue };
+            return gradGenerator(size, colorSteps);
+        }
+
+        static public List<Color> AccurateRainbow()
+        {
+            int size = Fractals.max_itters / 2;
+            Color[] colorSteps = { Color.Blue, Color.Green, Color.Yellow, Color.Orange, Color.Red };
+            return gradGenerator(size, colorSteps);
+        }
+
+        static public List<Color> Cool()
+        {
+            int size = Fractals.max_itters / 2;
+            Color[] colorSteps = { Color.Navy, Color.Blue, Color.Cyan, Color.Green, Color.YellowGreen, Color.Yellow };
+            return gradGenerator(size, colorSteps);
+        }
+
+        static public List<Color> Warm()
+        {
+            int size = Fractals.max_itters / 2;
+            Color[] colorSteps = { Color.Yellow, Color.Orange, Color.Red, Color.Purple };
             return gradGenerator(size, colorSteps);
         }
 

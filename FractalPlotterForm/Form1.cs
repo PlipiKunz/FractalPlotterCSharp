@@ -109,17 +109,37 @@ namespace FractalPlotterForm
 
 
 
-        private void toolStripTextBox1_Click(object sender, EventArgs e)
+        private void pleasingRainbowToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
             fp.setColor(ColorGradients.Rainbow);
             update();
         }
 
+        private void acurateRainbowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            fp.setColor(ColorGradients.AccurateRainbow);
+            update();
+        }
         private void greyScaleToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
             fp.setColor(ColorGradients.GreyScale);
+            update();
+        }
+
+        private void coolToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            fp.setColor(ColorGradients.Cool);
+            update();
+        }
+
+        private void warmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            fp.setColor(ColorGradients.Warm);
             update();
         }
 
@@ -128,8 +148,6 @@ namespace FractalPlotterForm
             fp.reset(Fractals.mandelbrot);
             update();
         }
-
-
 
         private void burningShipToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -160,6 +178,7 @@ namespace FractalPlotterForm
             fp.reset(Fractals.julia4);
             update();
         }
+
     }
 }
 
