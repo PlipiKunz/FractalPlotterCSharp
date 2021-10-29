@@ -36,6 +36,7 @@ namespace FractalPlotterForm
             this.fractalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mandelBrotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.burningShipToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.juliaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.julia1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.julia2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.julia3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -74,7 +75,7 @@ namespace FractalPlotterForm
             // greyScaleToolStripMenuItem
             // 
             this.greyScaleToolStripMenuItem.Name = "greyScaleToolStripMenuItem";
-            this.greyScaleToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.greyScaleToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.greyScaleToolStripMenuItem.Text = "GreyScale";
             this.greyScaleToolStripMenuItem.Click += new System.EventHandler(this.greyScaleToolStripMenuItem_Click);
             // 
@@ -83,10 +84,7 @@ namespace FractalPlotterForm
             this.fractalToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mandelBrotToolStripMenuItem,
             this.burningShipToolStripMenuItem,
-            this.julia1ToolStripMenuItem,
-            this.julia2ToolStripMenuItem,
-            this.julia3ToolStripMenuItem,
-            this.julia4ToolStripMenuItem});
+            this.juliaToolStripMenuItem});
             this.fractalToolStripMenuItem.Name = "fractalToolStripMenuItem";
             this.fractalToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
             this.fractalToolStripMenuItem.Text = "Fractal";
@@ -104,6 +102,17 @@ namespace FractalPlotterForm
             this.burningShipToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.burningShipToolStripMenuItem.Text = "BurningShip";
             this.burningShipToolStripMenuItem.Click += new System.EventHandler(this.burningShipToolStripMenuItem_Click);
+            // 
+            // juliaToolStripMenuItem
+            // 
+            this.juliaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.julia1ToolStripMenuItem,
+            this.julia2ToolStripMenuItem,
+            this.julia3ToolStripMenuItem,
+            this.julia4ToolStripMenuItem});
+            this.juliaToolStripMenuItem.Name = "juliaToolStripMenuItem";
+            this.juliaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.juliaToolStripMenuItem.Text = "Julia";
             // 
             // julia1ToolStripMenuItem
             // 
@@ -165,6 +174,7 @@ namespace FractalPlotterForm
         private System.Windows.Forms.ToolStripMenuItem greyScaleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mandelBrotToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem burningShipToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem juliaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem julia1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem julia2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem julia3ToolStripMenuItem;

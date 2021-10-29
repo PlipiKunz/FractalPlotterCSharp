@@ -129,6 +129,14 @@ namespace FractalPlotterForm
             update();
         }
 
+
+
+        private void burningShipToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fp.reset(Fractals.burningShip);
+            update();
+        }
+
         private void julia1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fp.reset(Fractals.julia1);
@@ -152,13 +160,6 @@ namespace FractalPlotterForm
             fp.reset(Fractals.julia4);
             update();
         }
-
-        private void burningShipToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            fp.reset(Fractals.burningShip);
-            update();
-        }
-
     }
 }
 
