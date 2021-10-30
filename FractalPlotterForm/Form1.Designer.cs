@@ -210,7 +210,7 @@ namespace FractalPlotterForm
             // 
             // WantedIters
             // 
-            this.WantedIters.Location = new System.Drawing.Point(12, 185);
+            this.WantedIters.Location = new System.Drawing.Point(267, 2);
             this.WantedIters.Maximum = new decimal(new int[] {
             5000,
             0,
@@ -238,7 +238,7 @@ namespace FractalPlotterForm
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 162);
+            this.label1.Location = new System.Drawing.Point(182, 4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 20);
             this.label1.TabIndex = 4;
@@ -265,7 +265,7 @@ namespace FractalPlotterForm
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 109);
+            this.label4.Location = new System.Drawing.Point(5, 109);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 20);
             this.label4.TabIndex = 10;
@@ -274,7 +274,7 @@ namespace FractalPlotterForm
             // RAxisDisplay
             // 
             this.RAxisDisplay.DecimalPlaces = 10;
-            this.RAxisDisplay.Location = new System.Drawing.Point(12, 132);
+            this.RAxisDisplay.Location = new System.Drawing.Point(12, 26);
             this.RAxisDisplay.Maximum = new decimal(new int[] {
             10,
             0,
@@ -293,7 +293,7 @@ namespace FractalPlotterForm
             // SpanDisplay
             // 
             this.SpanDisplay.DecimalPlaces = 10;
-            this.SpanDisplay.Location = new System.Drawing.Point(12, 26);
+            this.SpanDisplay.Location = new System.Drawing.Point(12, 132);
             this.SpanDisplay.Maximum = new decimal(new int[] {
             10,
             0,
@@ -347,8 +347,6 @@ namespace FractalPlotterForm
             // 
             this.splitContainer1.Panel1.Controls.Add(this.label3);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
-            this.splitContainer1.Panel1.Controls.Add(this.WantedIters);
-            this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.RAxisDisplay);
             this.splitContainer1.Panel1.Controls.Add(this.SpanDisplay);
             this.splitContainer1.Panel1.Controls.Add(this.label4);
@@ -369,13 +367,14 @@ namespace FractalPlotterForm
             this.ClientSize = new System.Drawing.Size(532, 453);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.WantedIters);
             this.Controls.Add(this.menuStrip1);
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResizeEnd += new System.EventHandler(this.Form1_ResizeEnd);
             this.Click += new System.EventHandler(this.Form1_Click);
