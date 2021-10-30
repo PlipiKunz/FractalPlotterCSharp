@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-
+using System.Threading;
 namespace FractalPlotterForm
 {
 
@@ -31,8 +31,6 @@ namespace FractalPlotterForm
              pb.Image = (Image)fp.img;
              this.Controls.Add(pb);*/
 
-            pictureBox1.Width = this.Width;
-            pictureBox1.Height = this.Height;
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.Image = (Image)fp.img;
         }
@@ -50,8 +48,6 @@ namespace FractalPlotterForm
 
         private void Form1_ResizeEnd(object sender, EventArgs e)
         {
-            /*pictureBox1.Width = this.Width;
-            pictureBox1.Height = this.Height;*/
         }
 
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
@@ -213,6 +209,28 @@ namespace FractalPlotterForm
             fp.Span = (float)SpanDisplay.Value;
             update();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            Thread t = new Thread((ThreadStart)(() =>
+            {
+                saveFileDialog1.Title = "Save the Fractal Image";
+                saveFileDialog1.Filter = "Bitmap Image| *.bmp";
+                saveFileDialog1.ShowDialog();
+
+                if (saveFileDialog1.FileName != "")
+                {
+                    fp.img.Save(saveFileDialog1.FileName);
+                }
+            }));
+
+            // Run your code from a thread that joins the STA Thread
+            t.SetApartmentState(ApartmentState.STA);
+            t.Start();
+            t.Join();
+        }
+
     }
 }
 

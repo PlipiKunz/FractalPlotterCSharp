@@ -13,6 +13,7 @@ using System.Numerics;
 
 namespace FractalPlotterForm
 {
+
     static class Program
     {
 
@@ -42,7 +43,6 @@ namespace FractalPlotterForm
         public float CenterR;
         public float CenterI;
         public int size;
-        private float _z;
 
         public Func<Complex, int> fractalFunction;
 
@@ -61,6 +61,10 @@ namespace FractalPlotterForm
             colors = colorGenerator();
         }
 
+        public void save(String fileName)
+        {
+            img.Save(fileName);
+        }
         public void reset(Func<Complex, int> fractalFunction)
         {
             CenterR = 0;
@@ -175,6 +179,8 @@ namespace FractalPlotterForm
             int adjustmAmount = 1;
 
             //calls the rectangle checker on the 4 corners
+
+
             rectangleChecker(pix_r, pix_i, r_step, i_step, call_depth + 1);
             rectangleChecker(pix_r + r_step - adjustmAmount, pix_i, r_step + extraAmountR + adjustmAmount, i_step, call_depth + 1);
             rectangleChecker(pix_r, pix_i + i_step - adjustmAmount, r_step, i_step + extraAmountI + adjustmAmount, call_depth + 1);
