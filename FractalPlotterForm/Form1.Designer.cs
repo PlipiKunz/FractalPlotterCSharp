@@ -58,6 +58,8 @@ namespace FractalPlotterForm
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.button1 = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.burningShipToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.buffaloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.WantedIters)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -158,7 +160,7 @@ namespace FractalPlotterForm
             // mandelBrotToolStripMenuItem
             // 
             this.mandelBrotToolStripMenuItem.Name = "mandelBrotToolStripMenuItem";
-            this.mandelBrotToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.mandelBrotToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.mandelBrotToolStripMenuItem.Text = "MandelBrot";
             this.mandelBrotToolStripMenuItem.Click += new System.EventHandler(this.mandelBrotToolStripMenuItem_Click);
             // 
@@ -170,7 +172,7 @@ namespace FractalPlotterForm
             this.julia3ToolStripMenuItem,
             this.julia4ToolStripMenuItem});
             this.juliaToolStripMenuItem.Name = "juliaToolStripMenuItem";
-            this.juliaToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.juliaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.juliaToolStripMenuItem.Text = "Julia";
             // 
             // julia1ToolStripMenuItem
@@ -203,10 +205,12 @@ namespace FractalPlotterForm
             // 
             // burningShipToolStripMenuItem
             // 
+            this.burningShipToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.burningShipToolStripMenuItem1,
+            this.buffaloToolStripMenuItem});
             this.burningShipToolStripMenuItem.Name = "burningShipToolStripMenuItem";
-            this.burningShipToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.burningShipToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.burningShipToolStripMenuItem.Text = "BurningShip";
-            this.burningShipToolStripMenuItem.Click += new System.EventHandler(this.burningShipToolStripMenuItem_Click);
             // 
             // WantedIters
             // 
@@ -360,6 +364,20 @@ namespace FractalPlotterForm
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 17;
             // 
+            // burningShipToolStripMenuItem1
+            // 
+            this.burningShipToolStripMenuItem1.Name = "burningShipToolStripMenuItem1";
+            this.burningShipToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.burningShipToolStripMenuItem1.Text = "BurningShip";
+            this.burningShipToolStripMenuItem1.Click += new System.EventHandler(this.burningShipToolStripMenuItem1_Click);
+            // 
+            // buffaloToolStripMenuItem
+            // 
+            this.buffaloToolStripMenuItem.Name = "buffaloToolStripMenuItem";
+            this.buffaloToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.buffaloToolStripMenuItem.Text = "Buffalo";
+            this.buffaloToolStripMenuItem.Click += new System.EventHandler(this.buffaloToolStripMenuItem_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -427,6 +445,8 @@ namespace FractalPlotterForm
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.ToolStripMenuItem burningShipToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem buffaloToolStripMenuItem;
     }
 }
 

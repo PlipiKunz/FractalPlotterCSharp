@@ -75,5 +75,19 @@ namespace FractalPlotterForm
             Complex c = new Complex(-.7269, .1889);
             return julia(z, c);
         }
+
+        public static int buffalo(Complex c)
+        {
+            Complex z = 0;
+            int depth = 0;
+
+            while (depth <= max_itters && z.Magnitude < 2)
+            {
+                z = Complex.Pow((Math.Abs(z.Real) + (Complex.ImaginaryOne * Math.Abs(z.Imaginary))), 2) - (Math.Abs(z.Real) + (Complex.ImaginaryOne * Math.Abs(z.Imaginary))) + c;
+                depth++;
+            }
+
+            return depth;
+        }
     }
 }
